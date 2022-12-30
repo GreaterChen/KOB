@@ -11,8 +11,6 @@ class BackendApplicationTests {
     @Test
     void contextLoads() {
         PasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
-        System.out.println(passwordEncoder.encode("clb030108"));
-        System.out.println(passwordEncoder.encode("123456"));
     }
 
 }
