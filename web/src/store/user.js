@@ -7,10 +7,9 @@ export default {
         photo: "",
         token: "",
         is_login: false,
-        pulling_info : true,
+        pulling_info: true,
     },
-    getters: {
-    },
+    getters: {},
     mutations: {    // 异步操作
         updateUser(state, user) {
             state.id = user.id;
@@ -23,7 +22,7 @@ export default {
             state.token = token;
         },
 
-        logout(state){
+        logout(state) {
             state.id = "";
             state.username = "";
             state.photo = "";
@@ -31,7 +30,7 @@ export default {
             state.is_login = false;
         },
 
-        updatePullingInfo(state,info){
+        updatePullingInfo(state, info) {
             state.pulling_info = info;
         }
     },
@@ -58,9 +57,10 @@ export default {
                     data.error(resp);
                 },
             });
+
         },
 
-        getinfo(context,data){
+        getinfo(context, data) {
             $.ajax({
                 // url: "https://app2799.acapp.acwing.com.cn/api/user/account/info/",
                 url: "http://localhost:3000/api/user/account/info/",
@@ -85,11 +85,10 @@ export default {
             });
         },
 
-        logout(context){
+        logout(context) {
             localStorage.removeItem("jwt_token");
             context.commit("logout");
         }
     },
-    modules: {
-    }
+    modules: {}
 }

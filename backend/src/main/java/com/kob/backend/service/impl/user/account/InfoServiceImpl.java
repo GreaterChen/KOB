@@ -14,6 +14,7 @@ import java.util.Map;
 public class InfoServiceImpl implements InfoSerevice {
     @Override
     public Map<String, String> getinfo() {
+        // 取出当前User
         UsernamePasswordAuthenticationToken authentication =
                 (UsernamePasswordAuthenticationToken) SecurityContextHolder.getContext().getAuthentication();
         UserDetailsImpl loginUser = (UserDetailsImpl) authentication.getPrincipal();
