@@ -8,7 +8,6 @@ export default {
         token: "",
         is_login: false,
         pulling_info : true,
-
     },
     getters: {
     },
@@ -39,7 +38,8 @@ export default {
     actions: {  // 同步操作
         login(context, data) {
             $.ajax({
-                url: "http://localhost:3000/user/account/token/",
+                // url: "https://app2799.acapp.acwing.com.cn/api/user/account/token/",
+                url: "http://localhost:3000/api/user/account/token/",
                 type: "post",
                 data: {
                     username: data.username,
@@ -62,7 +62,8 @@ export default {
 
         getinfo(context,data){
             $.ajax({
-                url: "http://localhost:3000/user/account/info/",
+                // url: "https://app2799.acapp.acwing.com.cn/api/user/account/info/",
+                url: "http://localhost:3000/api/user/account/info/",
                 type: "get",
                 headers: {
                     Authorization: "Bearer " + context.state.token,

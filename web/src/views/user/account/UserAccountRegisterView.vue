@@ -44,7 +44,8 @@ export default {
 
         const register =()=>{
             $.ajax({
-                url: "http://localhost:3000/user/account/register/",
+                // url: "https://app2799.acapp.acwing.com.cn/api/user/account/register/",
+                url: "http://localhost:3000/api/user/account/register/",
                 type: "post",
                 data:{
                 username: username.value,

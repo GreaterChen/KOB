@@ -8,20 +8,13 @@
 import NavBar from './components/NavBar.vue'
 import "bootstrap/dist/css/bootstrap.min.css"
 import "bootstrap/dist/js/bootstrap"
-import $ from 'jquery'  // 调试后端Post内容
+
 export default{
   components:{
     NavBar
   },
 
   setup(){
-    
-
-
-
-
-
-
 
   }
 }

@@ -12,7 +12,7 @@
                         <label for="password" class="form-label">密码</label>
                         <input v-model="password" type="password" class="form-control" id="password" placeholder="请输入密码">
                     </div>
-                    <div class="error_message">{{ error_message }}</div>
+                    <div class="error_message">{{error_message}}</div>
                     <button type="submit" class="btn btn-primary justify-content-md-center">提交</button>
                 </form>
             </div>
@@ -56,7 +56,6 @@ export default {
             store.commit("updatePullingInfo", false);
             console.log(store.state.user.pulling_info)
         }
-
 
         const login = () =>{
             error_message.value = "";
